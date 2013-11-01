@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+	xmlns:rim="http://www.blackberry.com/ns/widgets" 
+	version="1.0.1" id="GRNPHEV" xml:lang="en">
+    <name>GRNPHEV</name>
+    <author email="srwang@uwaterloo.ca" href="http://uwaft.com/" rim:copyright="Copyright 2012 University of Waterloo Alternative Fuels Team and Si Rui Wang">University of Waterloo Alternative Fuels Team</author>
+    <description>UWAFT EcoCAR2 vehicle monitoring centre</description>
+	
+	<rim:category name="system"/>
+    <icon src="appicon.png"/>
+    <content src="index.html"/>
+    
+    <rim:permissions>  
+	<rim:permit>access_shared</rim:permit>
+	<rim:permit>run_native</rim:permit>
+	<rim:permit>read_geolocation</rim:permit>
+	<rim:permit>use_camera</rim:permit>
+	<rim:permit>read_device_identifying_information</rim:permit>
+	<rim:permit>record_audio</rim:permit>
+	<!-- BB10 Specific -->
+	<rim:permit>run_when_backgrounded</rim:permit>
+	<rim:permit>access_location_services</rim:permit> 
+    </rim:permissions>
+
+	
+	<access uri="*" />
+	<access uri="http://localhost" />
+	<access uri="file:///" />
+    
+
+	<!-- Get ALL THE Permissions! -->
+	<feature id="uw.info" required="true" version="1.0.0.0"/>
+ 	<feature id="blackberry.event" required="true" version="1.0.0.0"/>
+    <feature id="qnx.navigator" required="true" version="1.0.0.0"/>
+    <feature id="qnx.navigator.overlay" required="true" version="1.0.0.0"/>
+    <feature id="qnx.keyboard.overlay" required="true" version="1.0.0.0"/>
+    <feature id="qnx.application" required="true" version="1.0.0.0"/>
+    <feature id="qnx.application.event" required="true" version="1.0.0.0"/>
+    <feature id="qnx.voice" required="true" version="1.0.0.0"/>
+    <feature id="qnx.navigation" required="true" version="1.0.0.0"/>
+    <feature id="qnx.user" required="true" version="1.0.0.0"/>
+    <feature id="qnx.audioplayer" required="true" version="1.0.0"/>
+    <feature id="qnx.mediasource" required="true" version="1.0.0"/>
+    <feature id="qnx.medialibrary" required="true" version="1.0.0"/>
+    <feature id="qnx.radio" required="true" version="1.0.0"/>
+    <feature id="qnx.sensors" required="true" version="1.0.0"/>
+    <feature id="qnx.settings" required="true" version="1.0.0"/>    
+    <feature id="qnx.audiomixer" required="true" version="1.0.0"/>    
+    <feature id="qnx.volume" required="true" version="1.0.0"/>    
+    <feature id="qnx.bluetooth" required="true" version="1.0.0"/>    
+    <feature id="qnx.hvac" required="true" version="1.0.0"/>    
+    <feature id="qnx.bluetooth.pbap" required="true" version="1.0.0"/>    
+    <feature id="qnx.message" required="true" version="1.0.0"/>    
+    <feature id="qnx.phone" required="true" version="1.0.0"/>    
+    <feature id="qnx.theme" required="true" version="1.0.0.0"/>
+	
+	<license>
+		Unless otherwise specified: 
+		Copyright © University of Waterloo Alternative Fuels Team and Si Rui Wang
+		All rights reserved. 
+	</license>
+</widget>

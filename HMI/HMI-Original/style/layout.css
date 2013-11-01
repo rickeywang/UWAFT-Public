@@ -1,0 +1,14 @@
+#infoDisplay {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 50%;
+	display: block;
+}
+#vehControls {
+	clear: none;
+	float: left;
+	margin-left: 0;
+	width: 50%;
+	display: block;
+}

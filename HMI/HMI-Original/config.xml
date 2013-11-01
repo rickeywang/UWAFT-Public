@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+        xmlns:rim="http://www.blackberry.com/ns/widgets"
+        version="1.1.0.13">  
+    <name>GRN PHEV Dashboard</name>
+    <author email="srwang@uwaterloo.ca" href="http://uwaft.com/" rim:copyright="Copyright 2012 University of Waterloo Alternative Fuels Team and Si Rui Wang">University of Waterloo Alternative Fuels Team</author>
+    <description>UWAFT EcoCAR2 vehicle monitoring centre</description>
+	
+    <icon src="appicon.png"/>
+    <content src="index.html"/>
+	
+	<feature id="blackberry.app"/>
+	
+	<feature id="blackberry.ui.dialog" required="true" version="1.0.0"/>
+	
+	<access uri="https://uwaft-tank.uwaterloo.ca" subdomains="true">
+		<feature id="blackberry.app.event" required="true" version="1.0.0"/>
+		<feature id="blackberry.invoke" required="true" version="1.0.0"/>
+	</access>
+	
+	<access uri="http://uwaft.com" subdomains="true">
+		<feature id="blackberry.app.event" required="true" version="1.0.0"/>
+		<feature id="blackberry.invoke" required="true" version="1.0.0"/>
+	</access>
+	
+	<rim:orientation mode="landscape" />
+	
+	<rim:loadingScreen  
+		backgroundColor="#D1D1D1" 
+		backgroundImage="splash.png" 
+		onFirstLaunch="true" 
+		onLocalPageLoad="false" 
+		onRemotePageLaunch="true" >
+		<rim:transitionEffect type="zoomIn"/>
+	</rim:loadingScreen>
+	
+    <rim:permissions>  
+		<rim:permit>access_shared</rim:permit>
+		<rim:permit>read_geolocation</rim:permit>
+		<rim:permit>use_camera</rim:permit>
+		<rim:permit>read_device_identifying_information</rim:permit>
+		<rim:permit>record_audio</rim:permit>
+		<!-- BB10 Specific -->
+		<rim:permit>run_when_backgrounded</rim:permit>
+		<rim:permit>access_location_services</rim:permit> 
+    </rim:permissions> 
+
+	<license>
+		Unless otherwise specified: 
+		Copyright © University of Waterloo Alternative Fuels Team and Si Rui Wang
+		All rights reserved. 
+	
+		FancyBox:
+		Licensed under the Apache License, Version 2.0 (the "License");
+		you may not use this file except in compliance with the License.
+		You may obtain a copy of the License at
+			http://www.apache.org/licenses/LICENSE-2.0
+		Unless required by applicable law or agreed to in writing, software
+		distributed under the License is distributed on an "AS IS" BASIS,
+		WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+		See the License for the specific language governing permissions and limitations under the License.
+	</license>
+</widget>

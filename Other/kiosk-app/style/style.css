@@ -1,0 +1,121 @@
+@CHARSET "ISO-8859-1";
+
+@font-face {
+    font-family: 'Maven Pro';
+    src: url('maven_pro_regular-webfont.eot');
+    src: url('maven_pro_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('maven_pro_regular-webfont.woff') format('woff'),
+         url('maven_pro_regular-webfont.ttf') format('truetype'),
+         url('maven_pro_regular-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Maven Pro Med';
+    src: url('maven_pro_medium-webfont.eot');
+    src: url('maven_pro_medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('maven_pro_medium-webfont.woff') format('woff'),
+         url('maven_pro_medium-webfont.ttf') format('truetype'),
+         url('maven_pro_medium-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+ 
+.error { 
+			color: red 
+		}
+body {
+			font: 100%/1.4 'Maven Pro Med', BBGlobal Sans, DejaVu Sans, Calibri, Verdana, Arial, Helvetica, sans-serif;
+		}
+
+h2 {
+	font-size:x-large;
+	color: #154D5B;
+	text-align: center;
+}
+
+#container {	
+			margin:0 auto; 
+			width: 1024px;
+			height: 600px; }
+			
+#world {		
+			float:left;
+			margin-left: 50;
+			margin-top: 50px;
+			width: 500px; }
+			
+#button {	
+			float:left;
+			margin-top: 100px;
+			margin-left: 25px;
+			width: 40%; }
+			
+#geolocationInfo {	
+			float:left;
+			margin-top: 10px;
+			margin-left: 25px;
+			width: 40%; }
+			
+#floralBkg {		  
+			background: url('xv.png') fixed;
+}
+
+#homeVid {
+	position: relative;
+	top: -150px;
+	left: 20px;
+	width: 960px;
+	height: 540px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:-280px;
+}
+/*
+.mask { 
+	-webkit-mask-box-image: url(mask.png); NOT SUPPORTED ON PLAYBOOK
+}
+ */
+ 
+#socialIcon{
+	padding: 50px;
+}
+
+
+button {
+	display: inline-block;
+	position: relative;
+	margin: 10px;
+	padding: 0 30px;
+	text-align: center;
+	text-decoration: none;
+	font: bold large/25px "BBGlobal Sans", "DejaVu Sans", Calibri, Verdana, Arial, Helvetica, sans-serif;
+	text-shadow: 1px 1px 1px rgba(255,255,255, .22);
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	-webkit-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+	-moz-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+	box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+	-webkit-transition: all 0.15s ease;
+	-moz-transition: all 0.15s ease;
+	-o-transition: all 0.15s ease;
+	-ms-transition: all 0.15s ease;
+	transition: all 0.15s ease;
+}
+
+/* Blue Color */
+
+.blue {
+	color: #EBEBEB;
+	background: #154D5B;
+}
+
+/* Gray Color */
+
+.gray {
+	color: #515151;
+	background: #d3d3d3;
+}

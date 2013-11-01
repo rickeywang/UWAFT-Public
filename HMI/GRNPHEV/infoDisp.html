@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title>Information Display</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+	</head>
+
+	<body>
+
+		<div data-role="page">
+
+			<!-- Custom Script: This thing refreshes whatever everytime a page loads.  -->
+			<script>
+				$(document).delegate('.ui-page', 'pageshow', function() {
+					//Your code for each page load here
+					//initInfoDisp();
+				});
+			</script>
+
+			<div data-role="header" class="ui-bar">
+				<div data-role="controlgroup" data-type="horizontal" class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal">
+					<div class="ui-controlgroup-controls">
+						<a href="index.html" data-role="button" data-icon="arrow-l" style="text-transform:uppercase;">Info Dashboard</a>
+					</div>
+				</div>
+
+				<div data-role="controlgroup" data-type="horizontal" class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal ui-btn-right">
+					<div class="ui-controlgroup-controls">
+						<a href="#" data-role="button" data-theme="c">Overview</a>
+						<a href="#" data-role="button" data-theme="c">Mech</a>
+						<a href="#" data-role="button" data-theme="c">Elec</a>
+						<a href="#devList" data-role="button" data-iconpos="right" data-icon="arrow-d" data-theme="c"> ...</a>
+					</div>
+				</div>
+
+				<div data-role="panel" id="devList"data-position="right" data-display="overlay" data-theme="a">
+					<p>
+						This is gonna be a list of devices.
+					<p>
+				</div>
+
+			</div><!-- /header -->
+
+			<div data-role="content">
+
+				<fieldset class="ui-grid-d">
+					<div class="ui-block-a">
+						ESS Volt
+					</div>
+					<div class="ui-block-b">
+						ESS Current
+					</div>
+					<div class="ui-block-c">
+						ESS SOC
+					</div>
+					<div class="ui-block-d">
+						ESS Temperature
+					</div>
+					<div class="ui-block-a" id="essVoltDisp">
+						No Signal
+					</div>
+					<div class="ui-block-b" id="essAmpDisp">
+						graph2
+					</div>
+					<div class="ui-block-c" id="essSOCDisp">
+						graph3
+					</div>
+					<div class="ui-block-d" id="essTempDisp">
+						graph4
+					</div>
+				</fieldset>
+
+			</div><!-- /content -->
+
+		</div><!-- /page -->
+
+	</body>
+</html>

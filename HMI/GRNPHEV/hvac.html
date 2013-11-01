@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title>UW Climate Control</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="hvac">
+			
+			<!-- Custom Script: This thing refreshes whatever everytime a page loads.  -->
+			<script>
+				$(document).delegate('.ui-page', 'pageshow', function() {
+					
+				});
+			</script>
+			
+			<div data-role="header" class="ui-bar">
+				<div data-role="controlgroup" data-type="horizontal" class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal">
+					<div class="ui-controlgroup-controls">
+						<a href="index.html" data-role="button" data-icon="arrow-l" style="text-transform:uppercase;">Climate Control</a>
+					</div>
+				</div>
+
+				<div data-role="controlgroup" data-type="horizontal" class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal ui-btn-right">
+					<div class="ui-controlgroup-controls">
+						<button id='autoEnable' data-theme='d'>
+							AUTO
+						</button>
+						<button id="syncEnable" onclick="changeSyncSetting();">
+							SYNC
+						</button>
+						<a href="#paxHvac" data-role="button" data-theme="d">Passenger Settings</a>
+					</div>
+				</div>
+
+			</div><!-- /header -->
+
+			<div data-role="content">
+				<fieldset class="ui-grid-b">
+					<div class="ui-block-a">
+						<div data-role="controlgroup" data-type="vertical" class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal ui-btn-right">
+							<div class="ui-controlgroup-controls xtraWideSlide">
+								<select name="acEnable" data-role="slider" id="acEnable" onchange="changeACSetting();">
+									<option value="off">AC Off</option>
+									<option value="on">AC On</option>
+								</select>
+
+							</div>
+						</div>
+					</div>
+					<div class="ui-block-b">
+						<form>
+							<label for="leftFanSpeedControl">Fan</label>
+							<input type="range" name="leftFanSpeedControl" id="leftFanSpeedControl" class="fanSpeedControl" onchange="setFanSpeed($(this).val());" data-highlight="true" min="0" max="6" value="0">
+						</form>
+					</div>
+					<div class="ui-block-c" style="text-align:right;">
+
+						<div data-role="controlgroup" data-type="vertical" class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal ui-btn-right">
+							<div class="ui-controlgroup-controls xtraWideSlide">
+								<select name="defrostEnable" data-role="slider" id="defrostEnable" onchange="changeRearDefrostSetting();">
+									<option value="off">Rear Defrost</option>
+									<option value="on">Rear Defrost</option>
+								</select>
+							</div>
+						</div>
+
+					</div>
+				</fieldset>
+
+				<fieldset class="ui-grid-a">
+					<div class="ui-block-a" id="leftHvac">
+						<form>
+							<label for="leftTemp">Left Temp</label>
+							<input type="range" name="leftTemp" id="leftTemp" class="" onchange="setTemperature('left',$(this).val());" data-highlight="true" min="15" max="26" value="0">
+						</form>
+					</div>
+					<div class="ui-block-b" id="rightHvac">
+						<label for="rightTemp">Right Temp</label>
+						<input type="range" name="rightTemp" id="rightTemp" class="" onchange="setTemperature('right',$(this).val());" data-highlight="true" min="15" max="26" value="0">
+					</div>
+				</fieldset>
+
+				<fieldset class="ui-grid-d" style="white-space:normal;">
+					<div class="ui-block-a xtraHeight">
+						<button onclick="heatSeatTap(1)">
+							left heated seat
+						</button>
+					</div>
+					<div class="ui-block-b xtraHeight">
+						<button onclick="fanSettingTap(1)">
+							window toggle
+						</button>
+					</div>
+					<div class="ui-block-c xtraHeight">
+						<button onclick="fanSettingTap(2)">
+							ft/win OR head/ft
+						</button>
+					</div>
+					<div class="ui-block-d">
+						<button onclick="fanSettingTap(3)">
+							head OR feet
+						</button>
+					</div>
+					<div class="ui-block-e">
+						<button onclick="heatSeatTap(2)">
+							right heated seat
+						</button>
+					</div>
+				</fieldset>
+
+				<fieldset class="ui-grid-b">
+					<div class="ui-grid-a">
+						Left Heat Seat:
+						<span id="leftHeatSeatDisp"></span>
+					</div>
+					<div class="ui-grid-b" id="currACDisp"></div>
+					<div class="ui-grid-c">
+						Right Heat Seat:
+						<span id="rightHeatSeatDisp"></span>
+					</div>
+				</fieldset>
+
+			</div><!-- /content -->
+
+			<!--Other Misc Stuff-->
+			<div data-role="panel" id="paxHvac" data-position="right" data-display="overlay" data-theme="a">
+				This is the future home of all pax hvac controls!
+				<br />
+				Massaged seats? <!-- panel content goes here -->
+			</div><!-- /panel -->
+
+		</div><!-- /page -->
+
+	</body>
+</html>
+

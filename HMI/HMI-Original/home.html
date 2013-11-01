@@ -1,0 +1,44 @@
+﻿<div data-bb-type="screen" data-bb-effect="fade">
+
+	<link href="style/layout.css" rel="stylesheet" type="text/css">
+	<script src="respond.min.js"></script>
+	<script id="actionBarInfo" src="js/actionBarInfo.js"></script>
+
+	<img src="res/img/uwaftic.png">
+  
+        
+   <div data-bb-type="image-list" data-bb-style="arrowlist" >
+		<div data-bb-type="header" data-bb-caption="Home">Home</div>
+		<div id="infoDisplay"  data-bb-type="item" onclick="bb.pushScreen('infoDisplay/1.html', 'info1');" data-bb-img="res/img/icons/dash.png" data-bb-title="Information Display">Information Display</div>
+		<div id="vehControls" data-bb-type="item" onclick="" data-bb-img="res/img/icons/ctrl.png" data-bb-title="Vehicle Controls">Vehicle Controls</div>
+		<div id="settings" data-bb-type="item" onclick="" data-bb-img="res/img/icons/settings.png" data-bb-title="Settings">Settings</div>
+		<div id="about" data-bb-type="item" onclick="" data-bb-img="res/img/icons/about.png" data-bb-title="About">About this app</div>
+   </div>
+
+   <div>
+		<input id="signal" type="text" placeholder="Enter signal"/>
+		<input id="data" type="text" placeholder="Enter data"/>
+		<div data-bb-type="button" onclick="updateActionBar(document.getElementById('signal').value,document.getElementById('data').value);">Apply</div>
+	</div>
+
+                  <p>Required Signals <br>
+                      (Must be Numerical)<br>
+                      HV Battery Temp<br>
+                      HV Battery SOC<br>
+                      HV Battery Current</p>
+                    <p>Performance Signals<br>
+                      Failure and Diagnostic Messages from MABx<br>
+                      Operating Mode (Charge Sustain, Regen Disabled, Engine On, Charging etc...)</p>
+
+
+	<div data-bb-type="action-bar">
+ 		<div id="essSOC" data-bb-type="action" data-bb-style="button"  data-bb-img="res/img/actionBar/essSOC.png"><i>No Signal</i></div>
+		 <div id="essAmp" data-bb-type="action" data-bb-style="button" data-bb-img="res/img/actionBar/essAmp.png"><i>No Signal</i></div>
+    	<div id="essTemp" data-bb-type="action" data-bb-style="button" data-bb-img="res/img/actionBar/essTemp.png"><i>No Signal</i></div>
+        <div id="essVolt" data-bb-type="action" data-bb-style="button" data-bb-img="res/img/actionBar/essVolt.png"><i>No Signal</i></div>
+	</div>
+    
+   
+
+</div> <!--End BB div-->
+

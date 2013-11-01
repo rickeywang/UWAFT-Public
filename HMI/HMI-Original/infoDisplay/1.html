@@ -1,0 +1,143 @@
+﻿<div data-bb-type="screen" data-bb-effect="slide-left" data-bb-scroll-effect="off">
+
+	<script id="infoDispJS" src="js/infoDisp.js" onunload="masterDetail_onUnload()"></script>
+	    
+    <link rel="stylesheet" type="text/css" href="css/fluid_grid.css">
+	<link rel="stylesheet" type="text/css" href="css/infoDisp.css">
+	
+	<style type="text/css">
+		.leftPanel {
+			width:25%;
+			padding:0px;
+			border-right: solid 2px #D9DCDE;
+		}
+		.rightPanel {
+			width:75%;
+			padding:0px;
+		}
+		.topPanel {
+			background-color:black;
+			color:white;
+		}
+	</style>
+	
+	<script src="js/infoUpdate.js" onunload="infoUpdate_onUnload()"></script>
+	
+	<script>
+		console.log('1.html');
+    </script>
+	  
+	<table style="padding:0px;
+					border-collapse:collapse;
+					margin:0px;
+					width:100%;">
+		<tr>
+			<td class="leftPanel">
+				<div id="master" style="height:526px;" data-bb-type="scroll-panel">
+					<div id="imageList" data-bb-type="image-list" data-bb-images="none" data-bb-image-effect="fade">
+						<div data-bb-type="header">Performance</div>
+						<div data-bb-type="item" onclick="doMasterDetailClick('overview')" data-bb-title="Overview" id="overviewButton"></div>
+						<div data-bb-type="item" onclick="doMasterDetailClick('elec')" data-bb-title="Electrical System"></div> 		
+						<div data-bb-type="item" onclick="doMasterDetailClick('ctrl')" data-bb-title="Controls System"></div>		
+						<div data-bb-type="header">Components</div>
+						<div data-bb-type="item" onclick="doMasterDetailClick('mg')" data-bb-title="Motors / Generator">tm4 Motive</div> 
+						<div data-bb-type="item" onclick="doMasterDetailClick('ice')" data-bb-title="Engine">GM LE</div> 
+                        <div data-bb-type="item" onclick="doMasterDetailClick('brusa')" data-bb-title="Charger">BRUSA</div> 
+					</div>
+				</div>
+			</td>
+			<td class="rightPanel">
+				<div id="details" style="height:526px" data-bb-type="scroll-panel">
+					<div class="topPanel" style="padding-left:15px;padding-bottom:5px;width:100%">
+						<span id="title">Undefined</span>
+					</div>
+					<div id="rightPanelDisp" style="padding:10px;display:block;" data-bb-type="scroll-panel">
+                    	<!--the onLoad cannot used to load the default panel-->
+						<p style="text-align:center;font-weight:bold;">Choose something from the left first</p>	
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+    
+	<!--Various Panels. Let's hide everything in 0px-->
+	<div style="display: block; line-height:0; height: 0; overflow: hidden;">
+		<div id="overview" style="visibility:hidden;">	
+				<div class="container container_3">
+				<div class="grid_1">
+					<div id="VehSpdAvgDrvn" style="width:250px; height:180px;"></div>
+					<span class="signalCaption">GMHS/VehSpdAvgDrvn</span>
+				</div>
+				<div class="grid_1">
+					<div id="g2"  style="width:250px; height:180px;"></div>
+					<span class="signalCaption">GMHS/SomeCANsignalName</span>
+				</div>
+				<div class="grid_1">
+					<div id="g3"  style="width:250px; height:180px"></div>
+					<span class="signalCaption">GMHS/SomeCANsignalName</span>
+				</div>
+				
+				<div class="grid_2">
+					<p id="SysPwrMd">No Signal</p>
+					<span class="signalCaption">System Power Mode</br>GMHS/SysPwrMd</span>
+				</div>
+				<div class="grid_1" style="overflow:none">
+					<!-- The progress bar is overflowing and I don't know why... -->
+					<p>
+					<progress id="bar1" value="99" max="100"></progress>
+					<span class="signalCaption"><b>Some Dumb Signal</b></br>GMHS/SysPwrMd</span>
+					</p>
+					
+					<progress id="bar2" value="9" max="10"></progress>
+					<span class="signalCaption"><b>Another Dumb Signal</b></br>GMHS/SysPwrMd</span>
+					
+				</div>
+				
+				<div class="grid_1">
+					<p>1 grid</p>
+				</div>
+				<div class="grid_1">
+					<p>1 grid</p>
+				</div>
+				<div class="grid_1">
+					<div data-bb-type="button" onclick="startRANDOM();">startRANDOM</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="elec" style="visibility:hidden;">		
+			<p style="text-align:center;font-weight:bold;">Typically a Master Detail view is seen on PlayBook when in Landscape</p>	
+			<p>Electrical System Info</p>
+		</div>
+		
+		
+		
+		<div id="ctrl" style="visibility:hidden;">		
+			<p>MOAR Controls stuff!!!</p>
+		</div>
+		
+		<div id="mg" style="visibility:hidden;">
+			<p>Some mg shit</p>	
+		</div>
+		
+		<div id="ice" style="visibility:hidden;">		
+		</div>
+		
+		<div id="brusa" style="visibility:hidden;">		
+		</div>
+	</div> <!--End of the hidden thing-->
+	
+	<div data-bb-type="action-bar" data-bb-back-caption="Back">
+ 		<div id="essSOC" data-bb-type="action" data-bb-style="button"  data-bb-img="res/img/actionBar/essSOC.png"><i>No Signal</i></div>
+		 <div id="essAmp" data-bb-type="action" data-bb-style="button" data-bb-img="res/img/actionBar/essAmp.png"><i>No Signal</i></div>
+    	<div id="essTemp" data-bb-type="action" data-bb-style="button" data-bb-img="res/img/actionBar/essTemp.png"><i>No Signal</i></div>
+        <div id="essVolt" data-bb-type="action" data-bb-style="button" data-bb-img="res/img/actionBar/essVolt.png"><i>No Signal</i></div>
+	</div>
+	
+	  <script>
+		setTimeout(function () {
+			initGauge();
+		}, 200);
+      </script>
+	
+</div> <!--End BB div-->
