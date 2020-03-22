@@ -1,0 +1,9 @@
+_i2c_start: CODE, 1854 0 4
+_main: CODE, 1891 0 40
+_i2c_waitForIdle: CODE, 1868 0 11
+__initialization: CODE, 1852 0 0
+_i2c_write: CODE, 1862 0 6
+_i2c_stop: CODE, 1858 0 4
+_i2c_init: CODE, 1879 0 12
+_ReadEncoderValue: CODE, 1931 0 117
+Total: 194
