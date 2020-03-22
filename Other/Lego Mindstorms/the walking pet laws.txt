@@ -1,0 +1,23 @@
+BIOLOGICAL PROPERTIES OF THE WALKING PET
+
+FOOD:
+	Initial 50;
+	Range 0 to 100, negative means dead, over 80 will warn, over 100 will die due to explosion
+		  YELLOWCOLOR: Curry Beef. +10;
+	      REDCOLOR: Vampire Blood. +20;
+	      BLUECOLOR: Blueberries. +6;
+	      GREENCOLOR: Bamboo leafs. +8;
+
+	Consumption rate: 12 per minute (2 per 10 seconds)
+	
+HAPPINESS:
+	Initial 50,
+	Range from 0 to 500. Negative it will stop moving because it's depressed. Over 3000 it will ascend into the skies due to excessive happiness. 
+	Each petting +10,
+	Consumption rate: 5 per 10 seconds,
+	Milstones:
+		At 20, tweets
+		At 100, tweets
+		At 450, warns it'll die soon
+		At 500, tweets
+	

@@ -1,0 +1,30 @@
+Field=Description~String~Description~192|Field=Digikey~String~Digikey~221|Field=Designator~String~Designator~742|Field=Value~String~Value~74|Field=Comment~String~Comment~74|Field=Quantity~Integer~Quantity~72|ReportField=Currency~<none>|ReportField=ProductionQuantity~1|ReportField=ProjectFileName~InfoDisplay.PrjPcb|ReportField=ProjectFullPath~\\uwaft-tank.uwaterloo.ca\Tech\Subteam Folders\Controls\Projects\InfoDisplay\PCB\InfoDisplay.PrjPcb|ReportField=Title~Bill of Materials For BOM Document [THEBOM.BomDoc]|ReportField=TotalQuantity~204|ReportField=ReportTime~6:37:01 PM|ReportField=ReportDate~7/22/2015|ReportField=ReportDateTime~7/22/2015 6:37:01 PM|ReportField=OutputName~Bill of Materials|ReportField=OutputType~BOM_PartType|ReportField=GeneratorName~BOM|ReportField=GeneratorDescription~Bill of Materials|ReportField=VariantName~None|ReportField=DataSourceFileName~THEBOM.BomDoc|ReportField=DataSourceFullPath~\\uwaft-tank.uwaterloo.ca\Tech\Subteam Folders\Controls\Projects\InfoDisplay\PCB\THEBOM.BomDoc
+12MHz Crystal Oscillator|XC1787CT-ND|X1||12MHz|1
+Atmel CAN Transceiver|ATA6561|TRNC1||ATA6561|1
+Atmel SAM Series Microcontroller|ATSAM3X8CA-AU-ND|U1||ATSAM3X8C|1
+Capacitor|490-1320-1-ND|C26|1uF|GRM155R60J105KE19D|1
+Capacitor|490-9993-1-ND|C28|0.05uF|GRM033R61E472KA12D|1
+Microchip 5V LDO|MCP1755T-5002E/OTCT-ND|REG1||MCP1755|1
+Panasonic Schottky Diode, 2A|DB2430100LCT-ND|ZD1||DB2430100L|1
+Polarized Capactior|478-8155-1-ND|C29|100uF|F930J107MAA|1
+Polarized Capactior|P16745-ND|C27|270uF|EEU-FR1A271|1
+PTC device, 2A hold, 4A trip|507-1749-1-ND|PTC1||0ZCF0200AF2C|1
+PUI 0.15W Speaker, 8 Ohm|668-1136-ND|SPK1||PUI AST-03008MR-R|1
+Resistor|311-422KHRCT-ND|R95|416k|RC0603FR-07422KL|1
+Rohm 3.3V LDO|BD33GC0MEFJ-ME2CT-ND|REG2||BD33GC0MEFJ-ME2CT-ND|1
+Semtech TVS Diode|UCLAMP0511PQTCTCT-ND|SD1||UCLAMP0511PQTCT|1
+TI Audio Amplifier, 0.350W, 5-12V|LM386MX-1/NOPBCT-ND|AMP1||LM386MX|1
+Variable Resistor|490-7005-1-ND|R96|10K|PVZ3A103C01R00|1
+Varistor (Voltage-Sensitive Resistor)|F6413-ND|VAR1||V10P14AUTO|1
+Capacitor|1276-2259-1-ND|C1, C2|30pF|CL10C300FB8NNNC, Cap|2
+Resistor|MCT0603-1.00K-CFCT-ND|R5, R6|1K|Res2|2
+Molex iClick Series Connector, 8 Pin, Molex iGrid Series Connector, 2 Row, 16 Pin, JTAG Header, 10-Pin, Dual row, 2.56 pitch, Male||HDR1, HDR2, HDR3||Vehicle, Display, JTAG|3
+Capacitor|445-6990-1-ND|C3, C4, C5, C6|10uF|CGA5L1X7R1E106K160AC|4
+Polarized Capactior|495-2200-1-ND|C7, C11, C15, C16|10uF|Cap Pol1|4
+Resistor|MCT0603-100K-CFCT-ND|R1, R2, R3, R4|100K|Res2|4
+Capacitor|490-1524-1-ND|C8, C9, C10, C12, C13, C14, C17, C18, C19, C20, C21, C22, C23, C24, C25|100nF|Cap|15
+Resistor|RHM100DCT-ND|R7, R8, R16, R17, R18, R25, R26, R27, R34, R35, R36, R43, R44, R49, R50, R55|100|Res2|16
+LED RGB, [NoValue], [NoValue], [NoValue], [NoValue], [NoValue], [NoValue], [NoValue], [NoValue], [NoValue], [NoValue], [NoValue], [NoValue], [NoValue], [NoValue], [NoValue], [NoValue], [NoValue]|CLVBA-FKA-CAEDH8BBB7A363CT-ND|LED1, LED2, LED3, LED4, LED5, LED6, LED7, LED8, LED9, LED10, LED11, LED12, LED13, LED14, LED15, LED16, LED17, LED18||LED|18
+Resistor|541-22ECT-ND|R10, R11, R12, R13, R14, R19, R20, R22, R23, R28, R29, R31, R32, R37, R38, R40, R41, R45, R46, R47, R48, R51, R52, R53, R54, R57, R58, R59, R97|22|Res2|29
+N-Channel MOSFET|SSM3K15AFSLFCT-ND|Q1, Q2, Q4, Q5, Q6, Q7, Q8, Q10, Q11, Q12, Q13, Q14, Q16, Q17, Q19, Q20, Q21, Q22, Q23, Q25, Q26, Q28, Q29, Q30, Q31, Q32, Q34, Q35, Q37, Q38, Q39, Q40, Q41, Q42, Q43, Q44, Q45, Q46, Q47, Q48, Q49, Q51, Q52, Q53||MOSFET-N|44
+Resistor|311-10KGRCT-ND|R9, R15, R21, R24, R30, R33, R39, R42, R56, R60, R61, R62, R63, R64, R65, R66, R67, R68, R69, R70, R71, R72, R73, R74, R75, R76, R77, R78, R79, R80, R81, R82, R83, R84, R85, R86, R87, R88, R89, R90, R91, R92, R93, R94, R98, R99|10k|311-10KGRCT-ND|46

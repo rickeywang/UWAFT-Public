@@ -1,0 +1,313 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10573,        304]
+NotebookOptionsPosition[      9764,        272]
+NotebookOutlinePosition[     10108,        287]
+CellTagsIndexPosition[     10065,        284]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Quantity", "[", 
+     RowBox[{"78.3", ",", "\"\<kOhm\>\""}], "]"}], "==", 
+    RowBox[{
+     FractionBox["50000", "fo"], "-", 
+     RowBox[{"Quantity", "[", 
+      RowBox[{"5", ",", "\"\<kOhm\>\""}], "]"}]}]}], ",", "fo"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6563698878410573`*^9, 3.656369925795228*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Solve", "::", "ratnz"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Solve was unable to solve the system with inexact \
+coefficients. The answer was obtained by solving a corresponding exact system \
+and numericizing the result. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Solve\\\", ButtonNote -> \
+\\\"Solve::ratnz\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.656369927860346*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"fo", "\[Rule]", 
+    TemplateBox[{"0.6002400960384153`"},
+     "QuantityUnit",
+     DisplayFunction->(TooltipBox[
+       StyleBox[
+        RowBox[{#, "\[InvisibleSpace]", 
+          StyleBox[
+           RowBox[{"\"/\"", "\[InvisibleSpace]", "\"\[CapitalOmega]\""}], 
+           "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> False], 
+       "Unit: reciprocal ohms"]& ),
+     InterpretationFunction->(RowBox[{"Quantity", "[", 
+        RowBox[{#, ",", 
+          FractionBox["1", "\"Ohms\""]}], "]"}]& )]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.6563699278803473`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Io", "=", 
+   RowBox[{"Quantity", "[", 
+    RowBox[{"4", ",", "\"\<A\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Vo", "=", 
+   RowBox[{"Quantity", "[", 
+    RowBox[{"5", ",", "\"\<V\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Vin", "=", 
+   RowBox[{"Quantity", "[", 
+    RowBox[{"12", ",", "\"\<V\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"f", "=", 
+   RowBox[{"Quantity", "[", 
+    RowBox[{"600", ",", "\"\<kHz\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"deltaVin", "=", 
+   RowBox[{"Quantity", "[", 
+    RowBox[{"0.05", ",", "\"\<V\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"N", "[", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{"deltaVin", "\[Equal]", 
+     RowBox[{
+      FractionBox["Io", 
+       RowBox[{"f", "*", "Cin"}]], "*", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", 
+        FractionBox["Vo", "Vin"]}], ")"}], "*", 
+      FractionBox["Vo", "Vin"]}]}], ",", "Cin"}], "]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6563677515758696`*^9, 3.6563679993170395`*^9}, {
+  3.6563680486438613`*^9, 3.656368052526083*^9}, {3.6563681771212096`*^9, 
+  3.656368295390974*^9}, {3.6563683465399*^9, 3.6563683604756966`*^9}, {
+  3.6563684691329117`*^9, 3.656368469254919*^9}, {3.6563689665043592`*^9, 
+  3.656368969442528*^9}, {3.6563695628994713`*^9, 3.6563695645045633`*^9}, {
+  3.6563702872349014`*^9, 3.6563703081850996`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Solve", "::", "ratnz"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Solve was unable to solve the system with inexact \
+coefficients. The answer was obtained by solving a corresponding exact system \
+and numericizing the result. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Solve\\\", ButtonNote -> \
+\\\"Solve::ratnz\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.6563702996976137`*^9, 3.6563703088331366`*^9}, 
+   3.656370492592647*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"Cin", "\[Rule]", 
+    TemplateBox[{"0.00003240740740740741`"},
+     "QuantityUnit",
+     DisplayFunction->(TooltipBox[
+       StyleBox[
+        RowBox[{#, "\[InvisibleSpace]", 
+          StyleBox[
+           RowBox[{" ", "\"F\""}], "QuantityUnitTraditionalLabel"]}], 
+        ShowStringCharacters -> False], "Unit: farads"]& ),
+     InterpretationFunction->(RowBox[{"Quantity", "[", 
+        RowBox[{#, ",", "\"Farads\""}], "]"}]& )]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.656367852341633*^9, {3.6563679396246257`*^9, 3.6563680000890837`*^9}, {
+   3.656368049652919*^9, 3.656368052711094*^9}, 3.656368250796424*^9, 
+   3.656368287292511*^9, {3.656368348541014*^9, 3.65636836070671*^9}, 
+   3.6563684697969494`*^9, 3.6563689721496825`*^9, 3.656369566825696*^9, {
+   3.6563702905110884`*^9, 3.6563703088351364`*^9}, 3.6563704925946474`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   TemplateBox[{"0.0000324074`"},
+    "QuantityUnit",
+    DisplayFunction->(TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"F\""}], "QuantityUnitTraditionalLabel"]}], 
+       ShowStringCharacters -> False], "Unit: farads"]& ),
+    InterpretationFunction->(RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Farads\""}], "]"}]& )], ",", "\"\<uF\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.656368338738454*^9, 3.6563683724513817`*^9}, 
+   3.656368473566165*^9, 3.6563695750551667`*^9, {3.656370303786848*^9, 
+   3.6563703125743504`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"32.407399999999996`"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, "\[InvisibleSpace]", 
+       StyleBox[
+        RowBox[{" ", "\"\[Mu]F\""}], "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: microfarads"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", "\"Microfarads\""}], "]"}]& )]], "Output",
+ CellChangeTimes->{{3.656368339735511*^9, 3.656368372975412*^9}, 
+   3.6563684742352037`*^9, 3.6563695762562356`*^9, {3.65637030538894*^9, 
+   3.656370313318393*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"L", "=", 
+   RowBox[{"Quantity", "[", 
+    RowBox[{"22", ",", "\"\<uH\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"deltaIL", "=", 
+   RowBox[{
+    FractionBox["Vo", 
+     RowBox[{"f", "*", "L"}]], "*", 
+    RowBox[{"(", 
+     RowBox[{"1", "-", 
+      FractionBox["Vo", "Vin"]}], ")"}]}]}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"ESRCo", " ", "=", 
+    RowBox[{"Quantity", "[", 
+     RowBox[{
+      RowBox[{"52.5", "+", "10"}], ",", "\"\<kOhm\>\""}], "]"}]}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"deltaVo", "=", 
+   RowBox[{"Quantity", "[", 
+    RowBox[{"5", ",", "\"\<mV\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"N", "[", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{"deltaVo", "\[Equal]", 
+     RowBox[{"deltaIL", "*", 
+      RowBox[{"(", 
+       FractionBox["1", 
+        RowBox[{"8", "*", "f", "*", "Co"}]], ")"}]}]}], ",", "Co"}], "]"}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.656368808148302*^9, 3.6563688231231585`*^9}, {
+   3.6563688632704554`*^9, 3.656368943289032*^9}, {3.6563690134120426`*^9, 
+   3.6563690573295546`*^9}, 3.6563696021097145`*^9, {3.656370430837115*^9, 
+   3.6563704311961355`*^9}, {3.6563706077852354`*^9, 3.656370609550337*^9}, {
+   3.656370643928303*^9, 3.656370658181118*^9}, {3.656370986981924*^9, 
+   3.656371043502157*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{FractionBox["7", "31680"]},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, "\[InvisibleSpace]", 
+       StyleBox[
+        RowBox[{" ", 
+          
+          RowBox[{"\"V\"", "\[InvisibleSpace]", "\"/(\"", "\[InvisibleSpace]",
+             "\"kHz\"", "\[ThinSpace]", "\"\[Mu]H\"", "\[InvisibleSpace]", 
+            "\")\""}]}], "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], 
+    "Unit: volts per kilohertz microhenry"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", 
+       FractionBox["\"Volts\"", 
+        RowBox[{"\"Kilohertz\"", " ", "\"Microhenries\""}]]}], 
+     "]"}]& )]], "Output",
+ CellChangeTimes->{
+  3.656368944080077*^9, {3.6563690355463085`*^9, 3.6563690580255947`*^9}, 
+   3.656370328594267*^9, 3.6563704469330354`*^9, 3.656370497064903*^9, 
+   3.6563706127115173`*^9, 3.656370682485508*^9, {3.65637099214922*^9, 
+   3.656371043812175*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"Co", "\[Rule]", 
+    TemplateBox[{"9.206649831649831`*^-6"},
+     "QuantityUnit",
+     DisplayFunction->(TooltipBox[
+       StyleBox[
+        RowBox[{#, "\[InvisibleSpace]", 
+          StyleBox[
+           RowBox[{" ", "\"F\""}], "QuantityUnitTraditionalLabel"]}], 
+        ShowStringCharacters -> False], "Unit: farads"]& ),
+     InterpretationFunction->(RowBox[{"Quantity", "[", 
+        RowBox[{#, ",", "\"Farads\""}], "]"}]& )]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.656368944080077*^9, {3.6563690355463085`*^9, 3.6563690580255947`*^9}, 
+   3.656370328594267*^9, 3.6563704469330354`*^9, 3.656370497064903*^9, 
+   3.6563706127115173`*^9, 3.656370682485508*^9, {3.65637099214922*^9, 
+   3.6563710439061804`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"fc", "=", "Quantity"}]], "Input",
+ CellChangeTimes->{{3.656372897305189*^9, 3.656372901611435*^9}}]
+},
+WindowSize->{774, 657},
+WindowMargins->{{-1376, Automatic}, {44, Automatic}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 385, 11, 46, "Input"],
+Cell[968, 35, 523, 11, 39, "Message"],
+Cell[1494, 48, 643, 16, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2174, 69, 1488, 38, 147, "Input"],
+Cell[3665, 109, 577, 12, 39, "Message"],
+Cell[4245, 123, 908, 19, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5190, 147, 662, 16, 31, "Input"],
+Cell[5855, 165, 589, 13, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6481, 183, 1377, 37, 143, "Input"],
+Cell[7861, 222, 974, 23, 46, "Output"],
+Cell[8838, 247, 784, 18, 33, "Output"]
+}, Open  ]],
+Cell[9637, 268, 123, 2, 31, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
